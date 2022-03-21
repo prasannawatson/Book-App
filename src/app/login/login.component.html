@@ -1,0 +1,31 @@
+<!-- Login header -->
+<div routerLink="/login" >
+    <div class="header" >
+        <a href="https://prosimo.io">
+            <img src="https://prosimo.io/wp-content/themes/prosimo/assets/img/promiso-logo-header.svg" alt="Prosimo">
+        </a>
+    </div>
+    <div class="col-lg-4 main-container">
+    <mat-card>
+   <!-- Login form -->
+    <h3> Login </h3>
+    <form [formGroup]="loginForm" (ngSubmit)="getLoginInfo()">
+        <div class="row">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Email Id</mat-label>
+                    <input matInput id="login-form"  type="text" formControlName="emailId" [(ngModel)]="emailValue" required>
+                  </mat-form-field>
+                  <small *ngIf="loginForm.controls['emailId'].invalid && (loginForm.controls['emailId'].dirty || loginForm.controls['emailId'].touched)" class="text-danger">
+                    <small *ngIf="loginForm.controls['emailId'].errors">
+                        Email address is invalid
+                  </small>
+                </small>
+        </div>
+    <div  class="row center" >
+        <button mat-raised-button [disabled]="!loginForm.valid" style="width : 10em;" color="primary" type="submit">Login</button>
+</div>
+    </form>
+
+</mat-card>
+</div>
+</div>

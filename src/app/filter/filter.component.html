@@ -1,0 +1,66 @@
+<div [formGroup]="filterForm" class="filter">
+
+    <div>
+        <!-- Name filter -->
+        <h6>Filter By Name</h6>
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Enter Name</mat-label>
+              <input matInput placeholder="Enter Book Name" value="" formControlName="name">
+            </mat-form-field>
+      
+        
+    </div>
+    <div >
+        <!-- Date filter -->
+        <h6>Filter By Date</h6>
+        <mat-form-field appearance="fill" >
+            <mat-label>Enter From and To Date</mat-label>
+            <mat-date-range-input formGroupName="range" [rangePicker]="picker">
+              <input matStartDate formControlName="from" placeholder="From date">
+              <input matEndDate formControlName="to" placeholder="To date">
+            </mat-date-range-input>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-date-range-picker #picker></mat-date-range-picker>
+          
+             <mat-error *ngIf="filterForm.get('range').get('from').hasError('matDatepickerMin')">Invalid From date</mat-error>
+            <mat-error *ngIf="filterForm.get('range').get('to').hasError('matDatepickerMax')">Invalid To date</mat-error>
+          </mat-form-field>
+    </div>
+    <div ><!-- Price filter -->
+        <h6>Filter By Price</h6>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Enter Price</mat-label>
+            <input matInput placeholder="Enter Price" value="" type="number" formControlName="price">
+          </mat-form-field>
+    </div>
+    <div>
+        <!-- Rating filter -->
+        <h6>Filter By Rating</h6>
+         <mat-form-field appearance="fill">
+            <mat-label>Enter Rating</mat-label>
+            <mat-select formControlName="ratingRange" [(ngModel)]="selectedOption">
+              <mat-option  *ngFor="let rate of ratingsRange" [value]="rate.value" >
+                {{rate.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Enter Rating Value</mat-label>
+            <input matInput placeholder="Enter Rating" value="" type="number" min="1" max="5" formControlName="rating">
+          </mat-form-field>
+    </div>
+    <div>
+        <!--Availability filter -->
+        <h6>Filter By Availability</h6>
+        <mat-radio-group aria-label="Select an option" formControlName="availability">
+            <mat-radio-button color="primary"  value="Yes">Yes</mat-radio-button>
+
+            <mat-radio-button  color="primary" value="No">No</mat-radio-button>
+          </mat-radio-group>
+    </div>
+    <div class="row">
+           <button mat-raised-button color="primary" (click)="submit()"> Apply </button>
+           <button mat-raised-button (click)="clear()"  > clear </button>
+    </div>
+    </div>
+

@@ -1,0 +1,62 @@
+.booklist{
+    width: 13rem;
+    margin: 0px 0px 50px 31px;
+    padding: 0;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    border: none;
+    position: relative;
+    float: left;
+    span:nth-child(1){
+        font-size: 14px;
+        font-weight: bold;
+        display: block;
+        margin-bottom: 0px;
+    }
+   p{
+        font-size: 12px;
+        font-weight: 400;
+        color:gray;
+        display: block;
+        margin-bottom: 0px;
+    }
+    span:nth-child(3){
+        font-size: 16px;
+        font-weight: 400;
+        color:#059fc5;
+        display: block;
+        margin: 15px 0 0px 0;
+        float: left;
+        i{
+            font-size: 13px;
+        }
+    }
+    button {
+        position: absolute;
+        top: 10px;
+        right: 8px;
+        color: #fff;
+        background: transparent;
+        border: none;
+        padding: 0;
+    }
+    ngx-star-rating{
+        margin-top: 18px;
+        display: block;
+    }
+ 
+}
+.booklist:hover{
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    cursor: pointer;
+}
+.content{
+    float: left;
+    margin: 72px 30px 30px 292px;
+  width: calc(100% - 302px);
+  .error{
+    text-align: center;
+    color: red;
+    font-weight: bold;
+    font-size: 16px;
+}
+}

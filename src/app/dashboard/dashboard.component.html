@@ -1,0 +1,11 @@
+<header>
+    <app-header></app-header>
+</header>
+<div class="row">
+<section>
+    <app-filter (bookDetailsFilterValue)="filterValue($event)"></app-filter>
+</section>
+<section>
+    <app-book-list [filterDetailsData]="resultBookDetail"></app-book-list>
+</section>
+</div>

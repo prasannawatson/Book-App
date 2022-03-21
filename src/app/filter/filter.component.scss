@@ -1,0 +1,32 @@
+.filter{
+    position: fixed;
+    top: 47px;
+    bottom: 0;
+    left:0;
+    background-color: #f6f4f5;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width:260px;
+    div{
+        padding: 10px 20px 0 20px;
+    }
+    h6{
+        
+        color: #059fc5;
+        padding: 8px 8px 8px 0px;
+        
+        font-size: 12px;
+       
+    }
+    mat-form-field{
+        width: 220px;
+        font-size: 12px;
+    }
+    mat-radio-group{
+        font-size: 12px;
+    }
+    .row button{
+        width : 6em;
+        margin: 20px 0px 0px  25px;
+    }
+}
