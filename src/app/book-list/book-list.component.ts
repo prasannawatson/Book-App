@@ -17,10 +17,7 @@ export class BookListComponent implements OnInit {
 
 
   ngOnInit(): void {
-    //retrieving book detail JSON from App store
-    this.store.select(getBookDetail).subscribe(data => {
-      this.filterDetailsData = data;
-    })
+    
   }
     
   }

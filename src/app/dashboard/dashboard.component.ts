@@ -46,12 +46,9 @@ export class DashboardComponent implements OnInit {
       if(data.name === el.name ||  data.price === el.price || data.availability === el.availability){
       return el.name;
       }
-      if(data.name === "" && data.price === "" && data.availability === "" && data.rating === "" && data.range.from === null && data.range.to === "" ){
+      if(data.name === "" && data.price === "" && data.availability === "" && data.rating === "" && data.range.from === "" && data.range.to === "" ){
         return el;
         }
-      if(data.name === null && data.price === null && data.availability === null && data.rating === null && data.range.to === null  ){
-          return el;
-       }
     }
     );
 
@@ -91,7 +88,7 @@ export class DashboardComponent implements OnInit {
     if(el.rating <= data.rating){
       return el.rating;
     }
- }  else{
+ }  else if(data.ratingRange === '>='){
   if(el.rating >= data.rating){
     return el.rating;
   }

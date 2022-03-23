@@ -53,6 +53,22 @@ selectedOption = '='
     availability:['']
     
   })
+
+  formInit(){
+   this.filterForm = this.form.group({
+      name: [''],
+      range: this.form.group({
+        from: [''],
+        to: [''],
+        
+      }),
+      price: [''],
+      ratingRange: ['='],
+      rating:[''],
+      availability:['']
+      
+    })
+  }
 // passing the output to book list 
 submit(){
   this.bookDetailsFilterValue.emit(this.filterForm.value);
@@ -61,5 +77,7 @@ submit(){
 // Clearing the filter value 
   clear(){
    this.filterForm.reset();
+   this.formInit();
+   this.bookDetailsFilterValue.emit(this.filterForm.value);
   }
 }
