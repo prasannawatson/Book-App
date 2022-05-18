@@ -1,5 +1,5 @@
 .header{
-    background: #ffffff;
+    background: #212121;
     height: 48px;
     line-height: 48px;
     position: fixed;
@@ -12,14 +12,7 @@
         text-overflow: ellipsis;
         width: 80%;
         display: block;
-        
-    }
-    .col span{
         color: #ffffff;
-        background-color: #059fc5;
-        display: block;
-        width: 45px;
-        text-align: center;
     }
     .col.pd-0{
         padding: 0px;

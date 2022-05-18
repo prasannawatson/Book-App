@@ -5,13 +5,13 @@
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     border: none;
     position: relative;
-    float: left;
     span:nth-child(1){
         font-size: 14px;
         font-weight: bold;
         display: block;
         margin-bottom: 0px;
     }
+
    p{
         font-size: 12px;
         font-weight: 400;
@@ -22,10 +22,9 @@
     span:nth-child(3){
         font-size: 16px;
         font-weight: 400;
-        color:#059fc5;
-        display: block;
-        margin: 15px 0 0px 0;
-        float: left;
+        color: #059fc5;
+        position: relative;
+        top: 39px;
         i{
             font-size: 13px;
         }
@@ -45,12 +44,18 @@
     }
  
 }
+.list{
+    flex-direction:row; 
+
+}
+.row{
+    flex-direction:row;  
+}
 .booklist:hover{
     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
     cursor: pointer;
 }
 .content{
-    float: left;
     margin: 72px 30px 30px 292px;
   width: calc(100% - 302px);
   .error{
@@ -59,4 +64,5 @@
     font-weight: bold;
     font-size: 16px;
 }
+
 }

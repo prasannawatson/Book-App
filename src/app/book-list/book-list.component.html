@@ -1,7 +1,7 @@
 <div class="content">
 
-<div class="row">'<div *ngIf="filterDetailsData.length">'
-    <div class="card booklist pd-0"  *ngFor="let book of filterDetailsData">
+<div><div class="list row row-cols-4" *ngIf="filterDetailsData.length">
+    <div class="col card booklist pd-0"  *ngFor="let book of filterDetailsData">
         
         <img [src]="book.imageUrl" class="card-img-top" alt="...">
         <div class="card-body">

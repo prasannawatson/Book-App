@@ -26,6 +26,9 @@ export class DashboardComponent implements OnInit {
       // retriveing the book object from local storage 
       var retrievedObject = localStorage.getItem('bookObject');
        this.resultBookDetail = JSON.parse(retrievedObject);
+       if (localStorage.getItem("bookObject") === null) {
+        this.resultBookDetail = data;
+      }
     });
   }
   // calling the filters
